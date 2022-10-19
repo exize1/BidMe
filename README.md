@@ -1,14 +1,16 @@
 # BidMe 
-
+Add about
 
 ## Table of contents 
 - [BidMe](#bid-me)
   - [Why was BidMe made](#Why-was-BidMe-made)
   - [Running the project](#running-the-project)
   - [Screenshots](#screenshots)
-    + [Goolo Swiper](#Goolo-Swiper)
-    + [Goolo Recommendations](#Goolo-Recommendations)
-
+    + [Create user / Login](#create-user-/-login)
+    + [Home page](#home-page)
+    + [Auction](#auction)
+    + [Add Product](#add-product)
+    + [User Page](#user-page)
 
   - [Technologies](#technologies)
     + [Client-Side](#client-side)
@@ -32,19 +34,48 @@
 
 ## Screenshots
 
-### Goolo Swiper
+### Create user / Login
 An interactive swiper, you like it, you swipe it.
 leave the rest to us :)
 
-<p align="center"><img src="./ImgsForReadMe/Swiper-screenshot.png" width="300" /></p>
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188306/Screenshots/singup_mbh6uc.jpg" /></p>
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188307/Screenshots/login_nylwtz.jpg" /></p>
 
-
-### Goolo Recommendations
+### Home page
 Clothes recommended specificialy for you,
 picked using our amazing algorithm!
 
 <p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
 
+
+### Home page
+Clothes recommended specificialy for you,
+picked using our amazing algorithm!
+
+<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
+
+### Home page
+Clothes recommended specificialy for you,
+picked using our amazing algorithm!
+
+<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
+
+### Home page
+Clothes recommended specificialy for you,
+picked using our amazing algorithm!
+
+<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
+### Home page
+Clothes recommended specificialy for you,
+picked using our amazing algorithm!
+
+<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
+
+### Home page
+Clothes recommended specificialy for you,
+picked using our amazing algorithm!
+
+<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
 ## Technologies:
 
 ### Client-side:
