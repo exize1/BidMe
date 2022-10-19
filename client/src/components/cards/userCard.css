@@ -1,0 +1,106 @@
+.user-card-cotnainer{
+    width: 18rem;
+    height: fit-content;
+    box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+}
+
+.user-card-image{
+    object-fit: cover;
+    max-height: 175px;
+    max-height: 175px;
+}
+
+.user-card-body{
+    text-align: start;
+    color: black;
+}
+
+
+.user-initial-price{
+    font-size: 0.8rem;
+}
+
+.lower-card-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more-options-icon-container{
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.603);
+    margin-right: 4%;
+}
+
+.remove-borders{
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.popper{
+    position: absolute;
+    height: 0px;
+    font-size: 0;
+}
+
+.remove-borders:hover .popper{
+    color: white;
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.911);
+    border-radius: 8px;
+    height: 30px;
+    width: max-content;
+    padding: 3px 10px 0 10px;
+    right: -150%;
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 773px) {
+    .user-card-cotnainer{
+        margin-top: 10%;
+        width: 10rem;
+        height: fit-content;
+        box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+    }
+    
+    .user-card-image{
+        object-fit: cover;
+        max-height: 95px;
+        max-height: 95px;
+    }
+    
+    .user-card-body{
+        height: 42px !important;
+        padding-top: 4%;
+        padding-left: 5%;
+    }
+
+    .user-card-title{
+        font-size: 0.8rem;
+        margin-top: 1%;
+    }
+
+    .user-initial-price{
+        font-size: 0.65rem;
+    }
+    
+    .price{
+        padding-top: 0.5%;
+        font-size: 0.7rem;
+    }
+
+    .lower-card-section{
+        padding-bottom: 0;
+        padding-top: 8%;
+    }
+
+    .bid-number{
+        font-size: 0.7rem;
+    }
+
+    .more-options-icon-container{
+        font-size: 1.2rem;
+    }
+}
+

@@ -1,0 +1,47 @@
+
+.illustration-container{
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
+    background-color: white;
+    width: 300px;
+    height: 208px;
+    border-radius: 13px;
+    box-shadow: rgba(4, 17, 29, 0.623) 0px 0px 8px 0px;
+}
+
+.illustration-product-page-card{
+    max-height: 70px;
+    min-height: 70px;
+    max-width: 70px;
+    min-width: 70px;
+    padding: 0.1px;
+    box-shadow: rgba(4, 17, 29, 0.623) 0px 0px 8px 0px;
+}
+
+.illustration-product-card-image{
+    object-fit: cover;
+    max-height: 70px;
+    height: 70px;
+    border-radius: 6px;
+}
+
+.illustration-title{
+    font-size: 0.5rem;
+}
+
+.illustration-end-date{
+    font-size: 0.4rem;
+}
+
+.illustration-initial-price{
+    font-size: 0.4rem;
+}
+
+.illustration-latest-price{
+    font-size: 0.6rem;
+}
+
+.illustration-description{
+    font-size: 0.35rem;
+}

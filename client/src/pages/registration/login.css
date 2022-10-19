@@ -1,0 +1,96 @@
+.login-page-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 74px;
+    overflow-y: scroll;
+}
+
+.invalid-login-alert{
+    position: fixed;
+    z-index: 100;
+    top: 15%;
+    width: 35%;
+    right: 35%;
+    opacity: 85%;
+}
+
+.background-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.teaser-container{
+    background-image: url(https://c8.alamy.com/comp/2D7GAPB/online-sale-shopping-vector-banner-design-online-shopping-text-with-phone-cart-and-paper-bag-elements-in-smartphone-app-store-for-mobile-business-2D7GAPB.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+    border-radius: 10px;
+    width: 90%;
+    height: 70%;
+}
+
+.right-side-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 900px){
+    .right-side-container{
+        width: 100%;
+    }
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.form-contianer{
+    width: 85%;
+}
+
+.password-input-contianer{
+    display: flex;
+}
+
+.password-input{
+    border-right: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.eye-button{
+    border-color: rgb(216, 215, 215);
+    border-left: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.eye-button:hover{
+    border-color: rgb(216, 215, 215) !important;
+    color: black !important;
+    background-color: white !important;
+}
+
+.forgot-password-contianer{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(0, 140, 255);
+}
+
+.stay-signed-container{
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,41 @@
+.resources-card{
+    border: 0;
+    box-shadow: rgb(0 0 0 / 8%) 0px 4px 15px;
+    cursor: pointer;
+}
+
+.resources-card-img{
+    object-fit: cover;
+    min-height: 230px;
+    max-height: 230px;
+}
+
+.resources-card:hover{
+    box-shadow: rgb(0 0 0 / 15%) 0px 6px 25px;
+    transition: all 0.1s ease 0s;
+}
+
+.text-container{
+    min-height: 55px;
+    max-height: 55px;
+    margin-right: 0 !important;
+}
+
+.home-card-text{
+    margin-bottom: 0;
+    /* font-size: 1.2vw; */
+}
+
+@media only screen and (max-width: 1000px) and ( min-width: 800px) {
+    .text-container{
+        max-height: 35px;
+        min-height: 35px;
+    }
+
+    .home-card-text{
+        font-size: 0.8rem;
+    }
+}
+
+
+
