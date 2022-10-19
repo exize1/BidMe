@@ -39,44 +39,44 @@ An interactive swiper, you like it, you swipe it.
 leave the rest to us :)
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188770/Screenshots/singup_jjwan6.jpg" /></p>
----
+
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188307/Screenshots/login_nylwtz.jpg" /></p>
 
 ### Home page
 Clothes recommended specificialy for you,
 picked using our amazing algorithm!
 
-<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188770/Screenshots/home_page_vamw5e.jpg"/></p>
 
 
-### Home page
+### Auction page
+Showing a brief of the products in the site, ordered by categories.
+1. Filters the products by categories
+2. Showing the 4 last uploaded products, if they exist
+3. For see more than the 4 last products
+
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666189539/Screenshots/Auction_ypjn7p.jpg"/></p>
+
+### Add Product
 Clothes recommended specificialy for you,
 picked using our amazing algorithm!
 
-<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188283/Screenshots/add_product_nkibas.jpg"/></p>
 
-### Home page
+### User page
 Clothes recommended specificialy for you,
 picked using our amazing algorithm!
 
-<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188306/Screenshots/user_page_ppxpho.jpg"/></p>
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666189383/Screenshots/user_settings_xdcyu8.jpg"/></p>
 
-### Home page
+### Product page
 Clothes recommended specificialy for you,
 picked using our amazing algorithm!
 
-<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
-### Home page
-Clothes recommended specificialy for you,
-picked using our amazing algorithm!
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188289/Screenshots/End-auction_pept91.jpg"/></p>
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188288/Screenshots/End-auction-product-owner_rgmca7.jpg"/></p>
 
-<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
-
-### Home page
-Clothes recommended specificialy for you,
-picked using our amazing algorithm!
-
-<p align="center"><img src="./ImgsForReadMe/Reccomendations-screenshot.png" width="300" /></p>
 ## Technologies:
 
 ### Client-side:
