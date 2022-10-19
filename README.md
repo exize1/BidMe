@@ -38,7 +38,8 @@ Add about
 An interactive swiper, you like it, you swipe it.
 leave the rest to us :)
 
-<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188306/Screenshots/singup_mbh6uc.jpg" /></p>
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188770/Screenshots/singup_jjwan6.jpg" /></p>
+---
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188307/Screenshots/login_nylwtz.jpg" /></p>
 
 ### Home page
