@@ -55,7 +55,7 @@ Showing a brief of the products in the site, ordered by categories.
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666189539/Screenshots/Auction_ypjn7p.jpg"/></p>
 
-### Add Produc
+### Add Product
 On clicking the 'Demo Card' it will open illustration (on the right bottom), that illustrate how the product page will look like, likewise the Demo Card. 
 Adding name, photo, price, description and amount of days, will apear in the illustration and the demo card.
 
@@ -81,7 +81,7 @@ The next following subjects are numbered on the screenshot:
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666189383/Screenshots/user_settings_xdcyu8.jpg"/></p>
 
 ### Product page
-In this page you can see every necessary detail on the product, such as:
+In this page you can see every necessary detail on the product. Such as:
 - Wider image
 - Name of the product
 - Intial price
