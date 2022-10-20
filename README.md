@@ -68,6 +68,7 @@ In the user page we can find 3 section:
 3. 'Settings' - Description in the next screenshot.
 
 The next following subjects are numbered on the screenshot:
+
 4. 'Delist' - Deletes the product from the database including the product's image and the bids related to this product.
 5. 'End auction' - Like the name implies, this option ending the auction. meaning the highest bid will be accepted and no one will be able to give a new bid.
 6. 'Copy Link' feature
