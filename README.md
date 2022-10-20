@@ -35,16 +35,14 @@ Add about
 ## Screenshots
 
 ### Create user / Login
-An interactive swiper, you like it, you swipe it.
-leave the rest to us :)
+Sign up page with Yup validation in the front and Jui validation at the back
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188770/Screenshots/singup_jjwan6.jpg" /></p>
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188307/Screenshots/login_nylwtz.jpg" /></p>
 
 ### Home page
-Clothes recommended specificialy for you,
-picked using our amazing algorithm!
+Welcome page with some usefull information about the auctions. In the picture - Three most profitable products on auction.
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188307/Screenshots/home_page_ummq0z.jpg"/></p>
 
