@@ -55,37 +55,80 @@ Showing a brief of the products in the site, ordered by categories.
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666189539/Screenshots/Auction_ypjn7p.jpg"/></p>
 
-### Add Product
-Clothes recommended specificialy for you,
-picked using our amazing algorithm!
+### Add Produc
+On clicking the 'Demo Card' it will open illustration (on the right bottom), that illustrate how the product page will look like, likewise the Demo Card. 
+Adding name, photo, price, description and amount of days, will apear in the illustration and the demo card.
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188283/Screenshots/add_product_nkibas.jpg"/></p>
 
 ### User page
-Clothes recommended specificialy for you,
-picked using our amazing algorithm!
+In the user page we can find 3 section:
+1. 'My auctions' - Shows all the products that the user uploaded.
+2. 'My Bids' - Shows all the products the user have bid on.
+3. 'Settings' - Description in the next screenshot.
+
+The next following subjects are numbered on the screenshot:
+4. 'Delist' - Deletes the product from the database including the product's image and the bids related to this product.
+5. 'End auction' - Like the name implies, this option ending the auction. meaning the highest bid will be accepted and no one will be able to give a new bid.
+6. 'Copy Link' feature
+7. 'Edit Avatar' - Change the user avatar.
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188306/Screenshots/user_page_ppxpho.jpg"/></p>
+
+1. "Change Credit Card" - For adding and update the credit card. The changes are saved in the database if they passed the validation and are displayed directly on the card on the right.
+2. "Delete Account" - Deletes the account from the DB and everything related to this user, such as the products he uploaded and the bids he made.
+
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666189383/Screenshots/user_settings_xdcyu8.jpg"/></p>
 
 ### Product page
-Clothes recommended specificialy for you,
-picked using our amazing algorithm!
+In this page you can see every necessary detail on the product, such as:
+- Wider image
+- Name of the product
+- Intial price
+- Lates priive 
+- Initial date
+- End auction date 
+- All the product's bids:
+  - Number of bids
+  - Bid's date
+  - Price
+  - Bider name
+
+In the images we can see the end of the auction from two prespective: 
+End of auction from regular users eyes
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188289/Screenshots/End-auction_pept91.jpg"/></p>
+
+End of auction from the product owner's eyes
+
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188288/Screenshots/End-auction-product-owner_rgmca7.jpg"/></p>
 
 ## Technologies:
 
 ### Client-side:
 * React.JS
-* Mobx
-* Sequelize
+* Cloudinary
 
 ### Server-side:
 * Node.JS
-* Express
-* SQL
+* Cloudinary
+* MongoDB
+
+## Tools and libraries:
+
+### Client-side:
+  * react-redux
+  * react-router
+  * bootstrap
+  * axios
+  * formik and yup
+
+### Server-side:
+  * Express
+  * bcrypt
+  * JWS
+  * mongoose
+  * Joi
 
 ## What's next:
 1. improve swiper page by sending new clothes every 30 swipes.
