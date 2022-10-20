@@ -46,7 +46,7 @@ leave the rest to us :)
 Clothes recommended specificialy for you,
 picked using our amazing algorithm!
 
-<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188770/Screenshots/home_page_vamw5e.jpg"/></p>
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188307/Screenshots/home_page_ummq0z.jpg"/></p>
 
 
 ### Auction page
