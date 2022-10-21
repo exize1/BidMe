@@ -72,7 +72,7 @@ Showing a brief of the products on the website, ordered by categories.
 2. Showing the 4 last uploaded products, if they exist
 3. To see more than the 4 last products
 
-<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666189539/Screenshots/Auction_ypjn7p.jpg"/></p>
+<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666392365/Screenshots/auction_lbnkxd.jpg"/></p>
 
 ### Add Product
 On clicking the 'Demo Card' it will open an illustration (on the right bottom), that illustrates how the product page will look like, likewise the Demo Card. 
