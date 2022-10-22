@@ -28,6 +28,7 @@ const UserPage = () => {
     const [alert, setAlert] = useState(false)
     const [alertMessage, setAlertMessage] = useState("")
     const [alertType, setAlertType] = useState("")
+    const [myBidsData, setMyBidsData] = useState([])
 
 
     const handleProductImageUpload = (e) => {
@@ -84,30 +85,14 @@ const UserPage = () => {
             )
         }
 
-    const filteredUserBids = (filterKey) => {
-        return(
-            bids.filter((val) => {
-                if(filterKey === ""){
-                    return val;
-                }else if(val.biderId.includes(filterKey)){
-                    return val;
-                }else return null
-            })
-            )
-        }
         const removeDuplicate = () => {
-            let bidsWithoutDup = []
-            filteredUserBids(user._id).forEach((element) => {
-                bidsWithoutDup.length === 0 && bidsWithoutDup.push(element)
-                if (bidsWithoutDup.length !== 0){
-                    bidsWithoutDup.forEach(newElement => {
-                        if(!newElement.productId.includes(element.productId)){
-                            bidsWithoutDup.push(element)
-                        }
-                    })
-                }
-            });
-            return bidsWithoutDup
+            userRequest.post(`/api/bidedproduct/`, ({userId: user._id}))
+                .then((res) => {
+                    const data = res.data
+                    data && setMyBidsData(data);
+         
+                })
+                .catch((err) => {console.log(err)});
         }
 
     return( 
@@ -158,6 +143,7 @@ const UserPage = () => {
                         setActionUnderline("")
                         setMyBidsUnderline("underline")
                         setSettingsUnderline("")
+                        removeDuplicate()
                         }}>
                             My bids
                     </button>
@@ -190,12 +176,14 @@ const UserPage = () => {
                 }
                 {myBids &&
                     <div className="user-cards-container">
-                    {filteredUserBids(user._id).length === 0 ? 
+                    {myBidsData.length === 0 ? 
                         <div>
                             <h1>No Bids yet</h1>
                         </div>: 
                         
-                        removeDuplicate().map((bid, index) => {
+                        myBidsData.map((bid, index) => {
+                            console.log(index, bid);
+                            console.log(filteredAuctions(bid.productId)[0]);
                             return(
                                 <div className="user-card-container">
                                     <BidCard key={index} product={filteredAuctions(bid.productId)[0]} setAlert={setAlert}/>
