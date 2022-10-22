@@ -12,7 +12,6 @@ const GetBiderDetails = ({product, className}) => {
             .post("/api/getProductBids", body)
             .then((res) => {
                     res.data && setBideDetails(res.data[0]);
-                    console.log(bideDetails);
             })
             .catch((err) => console.log(err));
     };
@@ -20,9 +19,9 @@ const GetBiderDetails = ({product, className}) => {
     return(
         <div>
             <Modal className={className} title="Bider Details" btnType="primary" modalButtonName="Bider Details" getBider={getBider} body={body}>
-                <p><b>Name:</b> {bideDetails.firstName + " " + bideDetails.lastName}</p>
-                <p><b>Email:</b> {bideDetails.email }</p>
-                <p><b>Phone Number:</b> +972 {bideDetails.phone}</p>
+                <p><b>Name:</b> {bideDetails ? bideDetails.firstName + " " + bideDetails.lastName : "Deleted user"}</p>
+                <p><b>Email:</b> {bideDetails ? bideDetails.email : "No email found"}</p>
+                <p><b>Phone Number:</b>  {bideDetails ? "+972" + bideDetails.phone : "No phone found"}</p>
             </Modal>
         </div>
     )

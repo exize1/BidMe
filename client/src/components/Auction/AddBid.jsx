@@ -1,6 +1,7 @@
 import { Formik } from "formik"
 import { useState } from "react"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { getBids } from "../../middleWare"
 import { selectUser } from "../../redux/slicers/UserSlice"
 import { userRequest } from "../../requestMethods"
 import Modal from "../modals/Modal"
@@ -16,10 +17,11 @@ const AddBid = ({product, className}) => {
     const addBid = (value) => {
         userRequest.post('/api/bids', value)
         .then((res) => {
-            res.data && console.log(bidStatus)
+            res.data && getBids(dispatch)
         })
         .catch((err) => console.log(err));
     }
+    const dispatch = useDispatch()
 
     const changeProductPrice = (value, values) => {
         userRequest.patch(`/api/product/${product._id}`, value)
