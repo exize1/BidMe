@@ -6,8 +6,8 @@ import { useSelector } from "react-redux";
 import FilterByCategory from "../../components/Auction/FilterByCategory";
 import { Link } from "react-router-dom";
 import AddProduct from '../../components/modals/AddProduct';
-import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { publicRequest } from '../../requestMethods';
 
 
 const Auction = () => {
@@ -26,7 +26,7 @@ const Auction = () => {
 
     const checkEndOfAuction = () => {
         const body = {}
-        axios
+        publicRequest
             .patch("/api/checkEndOfAuction", body)
             .then((res) => {
                 res.data && console.log(res.data)

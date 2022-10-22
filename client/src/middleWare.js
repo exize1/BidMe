@@ -1,11 +1,11 @@
-import axios from "axios";
 import { updateBidsData } from "./redux/slicers/BidsSlice";
 import { updateProductData } from "./redux/slicers/ProductSlice";
 import { updateUserData } from "./redux/slicers/UserSlice";
+import { publicRequest } from "./requestMethods";
 
 
 export function getBids(dispatch) {
-    axios.get('/api/bids')
+    publicRequest.get('/api/bids')
         .then((res) => {
             res.data && dispatch(updateBidsData(res.data))
         })
@@ -14,7 +14,7 @@ export function getBids(dispatch) {
 
 
 export function getProducts (dispatch) {
-    axios.get('/api/product')
+    publicRequest.get('/api/product')
     .then((res) => {
         res.data && dispatch(updateProductData(res.data))
     })
@@ -22,7 +22,7 @@ export function getProducts (dispatch) {
 }
 
 export function getUsers (setUsers) {
-    axios.get('/api/users')
+    publicRequest.get('/api/users')
         .then((res) => {
             res.data && setUsers(res.data)
         })
@@ -30,7 +30,7 @@ export function getUsers (setUsers) {
 }
 
 export function getUser (dispatch, id) {
-    axios.get(`/api/users/${id}`)
+    publicRequest.get(`/api/users/${id}`)
         .then((res) => {
             res.data && dispatch(updateUserData(res.data))
         })
