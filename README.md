@@ -155,3 +155,4 @@ End of auction from the product owner's eyes
 - [ ] Improve the list of 'Most popular' (on the home page) so it will show the most popular at different times (24 hours, 7 days, 30 days).
 - [ ] Link the search output to the product page.
 - [ ] Show in the auction page, only the Active products
+- [ ] Add skeleton
