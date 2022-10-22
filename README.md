@@ -153,6 +153,6 @@ End of auction from the product owner's eyes
 - [ ] Add 'change password' and 'Delist all my auctions' options in the setting section. 
 - [ ] Replace the Credit Card option with Paypal or/and Tranzila instead of saving the user's card details in the DB. 
 - [ ] Improve the list of 'Most popular' (on the home page) so it will show the most popular at different times (24 hours, 7 days, 30 days).
-- [ ] Link the search output to the product page.
+- [x] Link the search output to the product page.
 - [ ] Show in the auction page, only the Active products
 - [ ] Add skeleton
