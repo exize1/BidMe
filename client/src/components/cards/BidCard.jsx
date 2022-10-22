@@ -22,7 +22,7 @@ const BidCard = ({product}) => {
                     return val;
                 }else if(val.productId.includes(filterKey)){
                     return val;
-                }
+                }else return null
             })
             )
         }

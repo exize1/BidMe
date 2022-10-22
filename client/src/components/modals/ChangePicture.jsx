@@ -1,4 +1,3 @@
-import { useState } from "react"
 import './modal.css'
 
 const ChangePicture = ({title, size, setOpen, open, setAlert, children}) => {
