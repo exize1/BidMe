@@ -3,7 +3,6 @@ import { Formik } from "formik";
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import { selectUser } from "../../redux/slicers/UserSlice"
-import { selectProducts } from "../../redux/slicers/ProductSlice"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import OpenIllustration from '../illustration/Illustration';
 import DemoCard from '../illustration/DemoCard';
@@ -15,7 +14,6 @@ const AddProduct = ({className}) => {
     let windoWidth = window.innerWidth;
 
     const [productImage, setProductImage] = useState("")
-    const products = useSelector(selectProducts)
 
     const handleProductImageUpload = (e) => {
         const file = e.target.files[0]

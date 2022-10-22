@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 const NewLoginNav = () =>{
-    let windoWidth = window.innerWidth;
 
     return(
         <nav className="navbar bg-light navbar-contianer">

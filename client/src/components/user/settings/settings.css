@@ -3,6 +3,11 @@
     text-align: start;
 }
 
+.credit-card-container{
+    display: flex;
+    justify-content: center;
+}
+
 .credit-card{
     background: hsla(209, 63%, 92%, 1);
     background: linear-gradient(315deg, hsla(209, 63%, 92%, 1) 0%, hsla(43, 74%, 49%, 1) 0%, hsla(43, 74%, 49%, 1) 36%, hsla(43, 100%, 73%, 1) 100%);

@@ -1,5 +1,4 @@
 import '../cards/productCard.css'
-import { Image } from 'cloudinary-react'
 
 const DemoCard = ({selectedImage, demoProductName, demoProductPrice, demoProductDescription, demoProductEndDate}) => {
 
@@ -7,7 +6,6 @@ const DemoCard = ({selectedImage, demoProductName, demoProductPrice, demoProduct
             <div className="product-card-container">
                 <div className="card text-bg-dark product-card">
                     <img src={selectedImage ? selectedImage : "https://userguiding.com/wp-content/uploads/2021/05/product-service-manager.jpg"} alt="Product"  className="product-card-image" />
-                    {/* <Image cloudName="diggwedxe" publicId={product.image.public_id} className="product-card-image"/> */}
                     <div className="card-img-overlay product-details-container ">
                         <div>
                             <h5 className="product-card-title card-title">{demoProductName ? demoProductName : "Product Name"}</h5>

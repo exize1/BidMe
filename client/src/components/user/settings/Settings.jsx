@@ -6,7 +6,6 @@ import Modal from '../../modals/Modal'
 import { Formik } from "formik";
 import * as Yup from "yup";
 import './settings.css'
-import axios from "axios";
 import { selectCard, updateCardData } from "../../../redux/slicers/CardSlice";
 import { useState } from "react";
 
@@ -150,7 +149,7 @@ const Settings = ( ) => {
                 <p className="delist-all-botton">Delist all my Auctions</p>
                 <p className="delete-botton" onClick={() => handleDelete (user._id)}>Delete Account</p>
             </div>
-            <div className="col-6">
+            <div className="credit-card-container col-6">
                 <div className="credit-card row">
                     <div className="col-4 pe-0">
                         <div className="chip-container">
@@ -173,72 +172,77 @@ const Settings = ( ) => {
             <>
             <div className="row settings-font-size">
                 <div className="col">
-                    <Modal addOverflow="add-overflow" title="Adding Credit Card" modalButtonName="Change Credit Card" className="ps-0 pt-0 mb-2 settings-font-size">
-                    <Formik
-                            initialValues={{
-                                cardNumber: "",
-                                month: "",
-                                year: "",
-                                cvv: "",
-                                idNumber: "",
-                            }}
-                            onSubmit={(values) => {
-                                handleSubmition(values)
-                            }}
-                            // validationSchema={schema}
-                        >
-                            {({
-                            handleSubmit,
-                            handleChange,
-                            handleBlur,
-                            values,
-                            errors,
-                            touched,
-                            }) => (
+                <Modal addOverflow="add-overflow" title="Adding Credit Card" modalButtonName="Change Credit Card" className="ps-0 mb-2">
+                <Formik
+                        initialValues={{
+                            cardNumber: "",
+                            month: "",
+                            year: "",
+                            cvv: "",
+                            idNumber: "",
+                        }}
+                        onSubmit={(values) => {
+                            handleSubmition(values)
+                        }}
+                        validationSchema={schema}
+                    >
+                        {({
+                        handleSubmit,
+                        handleChange,
+                        handleBlur,
+                        values,
+                        errors,
+                        touched,
+                        }) => (
 
-                            <form onSubmit={handleSubmit} noValidate>
-                                <div className="form-floating mb-3">
-                                    <input name="cardNumber" type="text"  className="form-control" id="floatingInput" placeholder="Product Name" onChange={handleChange} value={values.cardNumber} onBlur={handleBlur}/>
-                                    <label htmlFor="floatingInput">Card Number</label>
-                                </div>
-                                <div className="input-group mb-3 col-2">
-                                    <select name="month" className="form-select" id="inputGroupSelect02" onChange={handleChange} value={values.month} onBlur={handleBlur}>
-                                        <option defaultValue>month</option>
-                                        {month.map((value, index) => {
-                                            return(
-                                                <option ket={index} value={value}>{value}</option>
-                                                )
-                                            })}
-                                    </select>
-                                    <label className="input-group-text" htmlFor="inputGroupSelect02">month</label>
-                                </div>
-                                <div className="input-group mb-3 col-2">
-                                    <select name="year" className="form-select" id="inputGroupSelect02" onChange={handleChange} value={values.year} onBlur={handleBlur}>
-                                        <option defaultValue>year</option>
-                                        {year.map((value, index) => {
-                                            return(
-                                                <option ket={index} value={value}>{value}</option>
+                        <form onSubmit={handleSubmit} noValidate>
+                            <div className="form-floating mb-3">
+                                <input name="cardNumber" type="text"  className="form-control" id="floatingInput" placeholder="Product Name" onChange={handleChange} value={values.cardNumber} onBlur={handleBlur}/>
+                                <label htmlFor="floatingInput">Card Number</label>
+                                <p className="error-message">{errors.cardNumber && touched.cardNumber && errors.cardNumber}</p>
+                            </div>
+                            <div className="input-group col-2">
+                                <select name="month" className="form-select" id="inputGroupSelect02" onChange={handleChange} value={values.month} onBlur={handleBlur}>
+                                    <option defaultValue>month</option>
+                                    {month.map((value, index) => {
+                                        return(
+                                            <option ket={index} value={value}>{value}</option>
                                             )
                                         })}
-                                    </select>
-                                    <label className="input-group-text" htmlFor="inputGroupSelect02">year</label>
-                                </div>
-                                <div className="form-floating mb-3">
-                                    <input name="cvv" type="text"  className="form-control" id="floatingInput" placeholder="Product Name" onChange={handleChange} value={values.cvv} onBlur={handleBlur}/>
-                                    <label htmlFor="floatingInput">CVV</label>
-                                </div>
-                                <div className="form-floating mb-3">
-                                    <input name="idNumber" type="text"  className="form-control" id="floatingInput" placeholder="Product Name" onChange={handleChange} value={values.idNumber} onBlur={handleBlur}/>
-                                    <label htmlFor="floatingInput">ID Numbe</label>
-                                </div>
-                                <button type="submit" className="btn btn-primary mb-4">Submit</button>
-                                <div className={`alert alert-${alertType} popup-alert mb-4`} role="alert" hidden={alert}>
-                                    {alertMessage}
-                                </div>
-                            </form>
-                            )}
-                        </Formik>      
-                    </Modal>
+                                </select>
+                                <label className="input-group-text" htmlFor="inputGroupSelect02">month</label>
+                            </div>
+                                <p className="error-message">{errors.month && touched.month && errors.month}</p>
+                            <div className="input-group mt-3 col-2">
+                                <select name="year" className="form-select" id="inputGroupSelect02" onChange={handleChange} value={values.year} onBlur={handleBlur}>
+                                    <option defaultValue>year</option>
+                                    {year.map((value, index) => {
+                                        return(
+                                            <option ket={index} value={value}>{value}</option>
+                                        )
+                                    })}
+                                </select>
+                                <label className="input-group-text" htmlFor="inputGroupSelect02">year</label>
+                            </div>
+                                <p className="error-message">{errors.year && touched.year && errors.year}</p>
+                            <div className="form-floating mb-3">
+                                <input name="cvv" type="text"  className="form-control" id="floatingInput" placeholder="Product Name" onChange={handleChange} value={values.cvv} onBlur={handleBlur}/>
+                                <label htmlFor="floatingInput">CVV</label>
+                                <p className="error-message">{errors.cvv && touched.cvv && errors.cvv}</p>
+                            </div>
+                            <div className="form-floating mb-3">
+                                <input name="idNumber" type="text"  className="form-control" id="floatingInput" placeholder="Product Name" onChange={handleChange} value={values.idNumber} onBlur={handleBlur}/>
+                                <label htmlFor="floatingInput">ID Numbe</label>
+                                <p className="error-message">{errors.idNumber && touched.idNumber && errors.idNumber}</p>
+                            </div>
+                            <button type="submit" className="btn btn-primary mb-4">Submit</button>
+                            <div className={`alert alert-${alertType} popup-alert mb-4`} role="alert" hidden={alert}>
+                                {alertMessage}
+                            </div>
+                        </form>
+                        )}
+                    </Formik>      
+                </Modal>
                     <p className="delist-all-botton">Change password</p>
                 </div>
                 <div className="col">

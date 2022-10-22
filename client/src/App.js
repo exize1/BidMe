@@ -1,5 +1,4 @@
 import './App.css';
-import Navbar from './components/navbar/Navbar';
 import Auction from './pages/Auction/Auction';
 import SignUp from './pages/registration/SignUp';
 import Login from './pages/registration/Login';

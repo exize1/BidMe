@@ -17,7 +17,7 @@ const ScrollSpy = ({product, filterKey, addOverflow}) =>{
                     return val;
                 }else if(val.productId.includes(filterKey)){
                     return val;
-                };
+                }else return null
             })
             )
         }
@@ -77,7 +77,7 @@ const ScrollSpy = ({product, filterKey, addOverflow}) =>{
                         <p className="m-0">Name</p>
                     </div>        
                     <div className="col">
-                        <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Price</a>
+                        <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#Price" role="button" aria-expanded="false">Price</a>
                         <ul className={`dropdown-menu ${addOverflow}`}>
                         {removePriceDuplicate(filterKey).reverse().map((bid, index) => {
                             return(
@@ -87,7 +87,7 @@ const ScrollSpy = ({product, filterKey, addOverflow}) =>{
                         </ul>
                     </div>            
                     <div className="col">
-                        <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Bid date</a>
+                        <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#BidDate" role="button" aria-expanded="false">Bid date</a>
                         <ul className={`dropdown-menu ${addOverflow}`}>
                         {removeDateDuplicate(filterKey).reverse().map((bid, index) => {
                             return(

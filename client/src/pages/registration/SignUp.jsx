@@ -130,7 +130,6 @@ const SignUp = () => {
                                                 className="form-control shadow"
                                                 placeholder=" "
                                                 onChange={handleChange}
-                                                value={values.phone ? values.phone : 0}
                                                 onBlur={handleBlur}
                                             />
                                             <label className="ms-3">Phone number</label>

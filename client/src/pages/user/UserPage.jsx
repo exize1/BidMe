@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import axios from "axios"
 import { Image } from "cloudinary-react"
 import { useState } from "react"
 import { useSelector } from "react-redux"
@@ -51,7 +50,7 @@ const UserPage = () => {
 
     const handleSubmition = (value) =>{
         value && 
-        axios.patch(`/api/users/${user._id}`, {"avatar": value, "public_id": user.avatar.public_id})
+        userRequest.patch(`/api/users/${user._id}`, {"avatar": value, "public_id": user.avatar.public_id})
             .then((res) => {
                 const data = res.data
                 data && 
@@ -69,7 +68,7 @@ const UserPage = () => {
                     return val;
                 }else if(val.userId.includes(filterKey)){
                     return val;
-                }
+                }else return null
             })
             )
         }
@@ -80,7 +79,7 @@ const UserPage = () => {
                     return val;
                 }else if(val._id.includes(filterKey)){
                     return val;
-                }
+                }else return null
             })
             )
         }
@@ -92,7 +91,7 @@ const UserPage = () => {
                     return val;
                 }else if(val.biderId.includes(filterKey)){
                     return val;
-                }
+                }else return null
             })
             )
         }
@@ -112,6 +111,8 @@ const UserPage = () => {
         }
 
     return( 
+        <>
+        <div className="home-background"/>
         <div className="user-page-container">
             <div className="profile-container">
                 <div className="banner-container">
@@ -205,14 +206,14 @@ const UserPage = () => {
                     </div>
                 }
                 {settings &&
-                    <div className="user-settings-container ">
+                    <div className="user-settings-container mb-5 ">
                         <Settings/>
                     </div>
                 }
             </div>
-            
-           
         </div>
+    </>
+
     )
 }
 
