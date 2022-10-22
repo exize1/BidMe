@@ -1,10 +1,10 @@
 import "./signup.css"
 import { Formik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateUserData } from "../../redux/slicers/UserSlice";
+import { publicRequest } from "../../requestMethods";
 
 
 const SignUp = () => {
@@ -32,7 +32,7 @@ const SignUp = () => {
             email,
             password
             }
-        axios.post("/api/register", sendbody)
+        publicRequest.post("/api/register", sendbody)
             .then((res) => {
                     const {avatar, email, firstName, lastName, password, _id } = res.data.userData
                     const accessToken = res.data.accessToken

@@ -39,13 +39,11 @@ function App() {
 
  
   useEffect(()=>{
-    // const id = setInterval(()=>{
       getProducts(dispatch)
       getBids(dispatch)
       getUsers(setUsers)
-    //   console.log("refreshed");
-    // }, 2000)
-    // return () => clearInterval(id)
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   return (
