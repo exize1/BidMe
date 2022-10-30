@@ -1,5 +1,5 @@
 # [BidMe](https://bidme.netlify.app/) 
-BidMe is all about bids. It's a site where you can upload your staff for a real-time auction. Other users can bid a higher price anytime they want (according to a table of different minimum prices depending  on the latest price), to win the auction and get their desired product. 
+BidMe is all about bids. It's a site where you can upload your stuff for a real-time auction. Other users can bid a higher price anytime they want (according to a table of different minimum prices depending  on the latest price), to win the auction and get their desired product. 
 As a user, you can be a Seller and Bidder, depending  on the actions you prefer to make. BUT you should be careful not to fall into greediness because we have a few rules to prevent exploitation:
 
 1. The user can end the auction anytime he wants, so bidders will not bid for fun. 
