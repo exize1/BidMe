@@ -107,7 +107,7 @@ const NewNavbar = ({users}) =>{
                         <Image cloudName="diggwedxe" publicId={user.avatar.public_id} className="avatar"/>
                     </div>
                 </div>
-              </>
+                </>
                 }
             </div>
         {open && 
