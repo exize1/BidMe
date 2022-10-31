@@ -5,10 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateUserData } from "../../redux/slicers/UserSlice";
 import { publicRequest } from "../../requestMethods";
+import { useState } from "react";
 
 
 const SignUp = () => {
     const navigate = useNavigate();
+    let windoWidth = window.innerWidth;
+    const [alert, setAlert] = useState(false)
+    const [message, setMessage] = useState("")
 
     const schema = Yup.object().shape({
         firstName: Yup.string().required("Please enter your first name"),
@@ -34,6 +38,8 @@ const SignUp = () => {
             }
         publicRequest.post("/api/register", sendbody)
             .then((res) => {
+                    setAlert(res.data.error)
+                    setMessage(res.data.message)
                     const {avatar, email, firstName, lastName, password, _id } = res.data.userData
                     const accessToken = res.data.accessToken
                     const values = {
@@ -50,7 +56,7 @@ const SignUp = () => {
                     dispatch(updateUserData(values));
                     return navigate("/");
             })
-            .catch((err) => console.log(err));
+            .catch((err) => (err));
     };
     const dispatch = useDispatch();
 
@@ -58,6 +64,11 @@ const SignUp = () => {
         <div className="signup-page-container">
             <div className="signup-background"></div>
             <div className="add-another-container">
+            {alert && (
+                <div className="alert alert-danger invalid-login-alert" role="alert" hidden={!alert}>
+                    {message}
+                </div>
+            )}
                 <div className="sign-up-container">
                     <div className="sign-up">
                         <h1 className="mb-4 pb-2 mt-5 color-white">Sign up</h1>
@@ -81,7 +92,7 @@ const SignUp = () => {
                             }) => (
                                 <form onSubmit={handleSubmit} noValidate>
                                     <div className="row">
-                                        <div className="form-floating mb-2 col">
+                                        <div className="form-floating sign-up-input mb-2 col">
                                             <input
                                                 name="firstName"
                                                 type="text"
@@ -91,7 +102,7 @@ const SignUp = () => {
                                                 value={values.firstName}
                                                 onBlur={handleBlur}
                                             />
-                                            <label className="ms-3">First name</label>
+                                            <label className="ms-3 input-lable">First name</label>
                                             <p className="error-message">{errors.firstName && touched.firstName && errors.firstName}</p>
                                         </div>
                                         <div className="form-floating mb-2 col">
@@ -104,10 +115,45 @@ const SignUp = () => {
                                                 value={values.lastName}
                                                 onBlur={handleBlur}
                                             />
-                                            <label className="ms-3">Last name</label>
+                                            <label className="ms-3 input-lable">Last name</label>
                                             <p className="error-message">{errors.lastName && touched.lastName && errors.lastName}</p>
                                         </div>
                                     </div>
+                                    {windoWidth <= 500 ? 
+                                    <>
+                                        <div className="row">
+                                            <div className="form-floating email-input col">
+                                                <input
+                                                    name="email"
+                                                    type="email"
+                                                    className="form-control shadow"
+                                                    placeholder=" "
+                                                    onChange={handleChange}
+                                                    value={values.email}
+                                                    onBlur={handleBlur}
+                                                />
+                                                <label className="ms-3 input-lable">Email address</label>
+                                                <p className="error-message">{errors.email && touched.email && errors.email}</p>
+                                            </div>
+                                        </div>
+                                        <p className=" align-center mb-0 color-white">OR</p>
+                                        <div className="row">
+                                            <div className="form-floating mb-2 col">
+                                                <input
+                                                    name="phone"
+                                                    type="text"
+                                                    className="form-control shadow"
+                                                    placeholder=" "
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                />
+                                                <label className="ms-3 input-lable">Phone number</label>
+                                                <p className="error-message">{errors.phone && touched.phone && errors.phone}</p>
+                                            </div>
+                                        </div>
+                                    </>
+                                    :
+                                    <>
                                     <div className="row">
                                         <div className="form-floating mb-2 col-6">
                                             <input
@@ -119,7 +165,7 @@ const SignUp = () => {
                                                 value={values.email}
                                                 onBlur={handleBlur}
                                             />
-                                            <label className="ms-3">Email address</label>
+                                            <label className="ms-3 input-lable">Email address</label>
                                             <p className="error-message">{errors.email && touched.email && errors.email}</p>
                                         </div>
                                         <p className="col-1 align-center color-white">OR</p>
@@ -132,10 +178,12 @@ const SignUp = () => {
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
                                             />
-                                            <label className="ms-3">Phone number</label>
+                                            <label className="ms-3 input-lable">Phone number</label>
                                             <p className="error-message">{errors.phone && touched.phone && errors.phone}</p>
                                         </div>
-                                    </div> 
+                                    </div>
+                                </>
+                                }
                                     <div className="row">
                                         <div className="form-floating mb-2 col">
                                             <input
@@ -147,7 +195,7 @@ const SignUp = () => {
                                                 value={values.password}
                                                 onBlur={handleBlur}
                                             />
-                                            <label className="ms-3">Password</label>
+                                            <label className="ms-3 input-lable">Password</label>
                                             <p className="error-message">{errors.password && touched.password && errors.password}</p>
                                         </div>
                                     </div> 
@@ -162,7 +210,7 @@ const SignUp = () => {
                                                 value={values.confirmPassword}
                                                 onBlur={handleBlur}
                                             />
-                                            <label className="ms-3">Confirm Password</label>
+                                            <label className="ms-3 input-lable">Confirm Password</label>
                                             <p className="error-message">{errors.confirmPassword && touched.confirmPassword && errors.confirmPassword}</p>
                                         </div>
                                     </div> 

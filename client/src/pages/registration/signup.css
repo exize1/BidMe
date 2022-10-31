@@ -5,7 +5,6 @@
 }
 
 .signup-background{
-    
     /* padding-top: 95px; */
     position: fixed;
     width: 100%;
@@ -54,4 +53,32 @@
 
 .error-message{
     color: red;
+}
+
+@media only screen and (max-width: 1000px){
+    .add-another-container{
+        padding-top: 5px;
+        margin: 0 15%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .add-another-container{
+        padding-top: 5px;
+        margin: 0 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .input-lable{
+        margin-left: 3vw !important;
+        margin-top: 1vw !important;
+        font-size: 3vw;
+    }
+
+    .email-input{
+        height: 60px;
+    }
 }

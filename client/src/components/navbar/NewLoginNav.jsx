@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 const NewLoginNav = () =>{
+  let windoWidth = window.innerWidth;
 
     return(
         <nav className="navbar bg-light navbar-contianer">
@@ -20,14 +21,26 @@ const NewLoginNav = () =>{
                   </Link>
                 </li>
             </ul>
-            <div className="right-side login-signup">
-              <Link to="/login">
-                <button type="button" className="btn btn-primary me-3  btn-sm">Login</button>
-              </Link>
-              <Link to="/signup">
-                <button type="button" className="btn btn-secondary me-3 btn-sm">Sign up</button>
-              </Link>
-            </div>
+            {windoWidth > 500 ?
+            <>
+              <div className="right-side login-signup">
+                <Link to="/login">
+                  <button type="button" className="btn btn-primary me-3  btn-sm">Login</button>
+                </Link>
+                <Link to="/signup">
+                  <button type="button" className="btn btn-secondary me-3 btn-sm">Sign up</button>
+                </Link>
+              </div>
+            </>
+            :
+            <>
+              <div className="right-side login-signup">
+                <Link to="/login">
+                  <button type="button" className="btn btn-primary me-3  btn-sm">Login</button>
+                </Link>
+              </div>
+            </>
+            }
           </div>
         </nav>
     )

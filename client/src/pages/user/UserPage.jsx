@@ -6,7 +6,6 @@ import BidCard from "../../components/cards/BidCard"
 import UserCard from "../../components/cards/UserCard"
 import ChangePicture from "../../components/modals/ChangePicture"
 import Settings from "../../components/user/settings/Settings"
-import { selectBids } from "../../redux/slicers/BidsSlice"
 import { selectProducts } from "../../redux/slicers/ProductSlice"
 import { selectUser } from "../../redux/slicers/UserSlice"
 import { userRequest } from "../../requestMethods"
@@ -15,7 +14,6 @@ import "./userPage.css"
 const UserPage = () => {
 
     const user = useSelector(selectUser)
-    const bids = useSelector(selectBids)
     const products = useSelector(selectProducts)
     const [open, setOpen] = useState(false)
     const [myBids, setMyBids] = useState(false)
